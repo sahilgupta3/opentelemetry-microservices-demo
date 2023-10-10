@@ -24,13 +24,13 @@ from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExport
 from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.instrumentation.urllib3 import URLLib3Instrumentor
 
-tracer_provider = TracerProvider()
-trace.set_tracer_provider(tracer_provider)
-tracer_provider.add_span_processor(BatchSpanProcessor(OTLPSpanExporter()))
+#tracer_provider = TracerProvider()
+#trace.set_tracer_provider(tracer_provider)
+#tracer_provider.add_span_processor(BatchSpanProcessor(OTLPSpanExporter()))
 
 # Instrumenting manually to avoid error with locust gevent monkey
-RequestsInstrumentor().instrument()
-URLLib3Instrumentor().instrument()
+#RequestsInstrumentor().instrument()
+#URLLib3Instrumentor().instrument()
 
 products = [
     '0PUK6V6EV0',
